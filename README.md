@@ -1,4 +1,27 @@
-# VPSmaxxing 🖥️⚡
+<div align="center">
+
+<pre>
+ ╦  ╦╔═╗╔═╗┌┬┐┌─┐─┐ ┬─┐ ┬┬┌┐┌┌─┐
+ ╚╗╔╝╠═╝╚═╗│││├─┤┌┴┬┘┌┴┬┘│││││ ┬
+  ╚╝ ╩  ╚═╝┴ ┴┴ ┴┴ └─┴ └─┴┘┘└┘└─┘
+</pre>
+
+# 🖥️⚡ VPSmaxxing
+
+### rent the cores · keep the cash · run your agents anywhere
+
+Turn a **~$5/mo** cloud VPS into a dedicated, always-on workbench for **Claude Code + Codex** — _set up by an agent, for your agents._
+
+`your laptop ──tailscale──▶ VPS · agents in tmux · docker · builds · 24/7`
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](LICENSE)
+![Made with Claude Code + Codex](https://img.shields.io/badge/made_with-Claude_Code_%2B_Codex-8A2BE2)
+![bash](https://img.shields.io/badge/bash-121011?logo=gnu-bash&logoColor=white)
+![Linux VPS](https://img.shields.io/badge/VPS-Linux-FCC624?logo=linux&logoColor=black)
+![cost](https://img.shields.io/badge/cost-~$5%2Fmo-brightgreen)
+![not a macbook](https://img.shields.io/badge/not_a-%243%2C000_MacBook_Pro-ef4444)
+
+</div>
 
 > **I couldn't find anything that would just *set this up* for me — so I spent hours
 > figuring it out, and then turned the whole thing into a skill so you don't have to.**
@@ -246,3 +269,9 @@ macOS laptop) into something anyone can re-run. PRs welcome — especially provi
 price updates and more OS branches.
 
 *Made because renting 8 cores should be easier than affording 8 cores.* 🚀
+
+---
+
+## License
+
+[MIT](LICENSE) © 2026 Kuber Mehta. Use it, fork it, share it — then go set up your VPS.
