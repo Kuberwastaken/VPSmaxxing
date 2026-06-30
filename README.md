@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="VPSmaxxing" width="160" />
+<img src="assets/logo-bw.svg" alt="VPSmaxxing" width="160" />
 
 # VPSmaxxing
 
