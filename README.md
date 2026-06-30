@@ -1,10 +1,6 @@
 <div align="center">
 
-<pre>
- ╦  ╦╔═╗╔═╗┌┬┐┌─┐─┐ ┬─┐ ┬┬┌┐┌┌─┐
- ╚╗╔╝╠═╝╚═╗│││├─┤┌┴┬┘┌┴┬┘│││││ ┬
-  ╚╝ ╩  ╚═╝┴ ┴┴ ┴┴ └─┴ └─┴┘┘└┘└─┘
-</pre>
+<img src="assets/logo.svg" alt="VPSmaxxing" width="150" />
 
 # 🖥️⚡ VPSmaxxing
 
@@ -67,7 +63,7 @@ is worth the repo.
 
 **With Claude Code (recommended):**
 ```bash
-git clone <this-repo> ~/Personal-Projects/VPSmaxxing
+git clone https://github.com/Kuberwastaken/VPSmaxxing.git ~/Personal-Projects/VPSmaxxing
 bash ~/Personal-Projects/VPSmaxxing/scripts/install-skill.sh   # installs into ~/.claude/skills (copy; --link to symlink)
 ```
 Then in Claude Code just say: **"set up a VPS for my AI agents"** (or run

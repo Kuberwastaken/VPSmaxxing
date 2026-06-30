@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">VPSmaxxing app icon</title>
+  <desc id="desc">A dark rounded badge combining a terminal server window with an electric lightning bolt.</desc>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="#0F172A"/>
+  <rect x="34" y="34" width="444" height="444" rx="94" fill="none" stroke="#6D28D9" stroke-width="14"/>
+
+  <rect x="96" y="112" width="320" height="288" rx="38" fill="#0F172A" stroke="#6D28D9" stroke-width="18"/>
+  <path d="M107 188h298" fill="none" stroke="#6D28D9" stroke-width="18"/>
+  <circle cx="142" cy="150" r="11" fill="#22D3EE"/>
+  <circle cx="178" cy="150" r="11" fill="#22D3EE" opacity=".7"/>
+
+  <path d="M141 250l38 31-38 31" fill="none" stroke="#22D3EE" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M206 315h66" fill="none" stroke="#22D3EE" stroke-width="24" stroke-linecap="round"/>
+  <path d="M130 352h82" fill="none" stroke="#6D28D9" stroke-width="18" stroke-linecap="round"/>
+  <path d="M242 352h42" fill="none" stroke="#6D28D9" stroke-width="18" stroke-linecap="round"/>
+
+  <path d="M325 155 249 279h61l-41 109 123-151h-62l45-82z" fill="#0F172A" stroke="#0F172A" stroke-width="34" stroke-linejoin="round"/>
+  <path d="M325 155 249 279h61l-41 109 123-151h-62l45-82z" fill="#22D3EE"/>
+</svg>
