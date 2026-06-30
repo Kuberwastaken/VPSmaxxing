@@ -45,7 +45,7 @@ is worth the repo.
 **With Claude Code (recommended):**
 ```bash
 git clone <this-repo> ~/Personal-Projects/VPSmaxxing
-bash ~/Personal-Projects/VPSmaxxing/scripts/install-skill.sh   # symlinks into ~/.claude/skills
+bash ~/Personal-Projects/VPSmaxxing/scripts/install-skill.sh   # installs into ~/.claude/skills (copy; --link to symlink)
 ```
 Then in Claude Code just say: **"set up a VPS for my AI agents"** (or run
 `/vpsmaxxing`). The skill **interviews you first** — what you have, which agents,
