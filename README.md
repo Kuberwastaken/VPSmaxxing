@@ -1,23 +1,21 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="VPSmaxxing" width="150" />
+<img src="assets/logo.svg" alt="VPSmaxxing" width="160" />
 
-# 🖥️⚡ VPSmaxxing
+# VPSmaxxing
 
-### rent the cores · keep the cash · run your agents anywhere
+**rent the cores · keep the cash · run your agents anywhere**
 
-Turn a **~$5/mo** cloud VPS into a dedicated, always-on workbench for **Claude Code + Codex** — _set up by an agent, for your agents._
+Turn a ~$5/mo cloud VPS into a dedicated, always-on workbench for Claude Code + Codex — set up by an agent, for your agents.
 
-`your laptop ──tailscale──▶ VPS · agents in tmux · docker · builds · 24/7`
+`your laptop --tailscale--> VPS · agents in tmux · docker · builds · 24/7`
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](LICENSE)
-![Made with Claude Code + Codex](https://img.shields.io/badge/made_with-Claude_Code_%2B_Codex-8A2BE2)
-![bash](https://img.shields.io/badge/bash-121011?logo=gnu-bash&logoColor=white)
-![Linux VPS](https://img.shields.io/badge/VPS-Linux-FCC624?logo=linux&logoColor=black)
-![cost](https://img.shields.io/badge/cost-~$5%2Fmo-brightgreen)
-![not a macbook](https://img.shields.io/badge/not_a-%243%2C000_MacBook_Pro-ef4444)
+[![license](https://img.shields.io/badge/license-MIT-000000?style=flat-square)](LICENSE)
+![shell](https://img.shields.io/badge/shell-bash-000000?style=flat-square)
+![agents](https://img.shields.io/badge/agents-Claude_Code_+_Codex-000000?style=flat-square)
 
 </div>
+
 
 > **I couldn't find anything that would just *set this up* for me — so I spent hours
 > figuring it out, and then turned the whole thing into a skill so you don't have to.**
@@ -95,7 +93,7 @@ Architecture & mental model: [`references/00-architecture.md`](references/00-arc
 
 ---
 
-## Don't have a VPS yet? Here's where to get one 💸
+## Don't have a VPS yet? Here's where to get one
 
 *Researched June 2026; prices change — every figure links to its source. Pick by
 how you'll use it:*
@@ -110,7 +108,7 @@ how you'll use it:*
 - **Bursty/occasional:** an **AWS/GCP/Azure** hourly box that you **stop when idle**
   (pay only for disk while stopped).
 
-> ⚠️ **The 24/7 trap:** hourly clouds look cheap per-hour but an always-on AWS
+> **The 24/7 trap:** hourly clouds look cheap per-hour but an always-on AWS
 > `m6a.2xlarge` (8 vCPU/32 GB) is ≈ **$252/month**. Either go flat-rate, or
 > stop-when-idle. (Flat-rate VPS keep billing even powered off — snapshot+destroy to
 > truly stop paying.)
@@ -118,7 +116,7 @@ how you'll use it:*
 
 ### Budget / best-value providers
 
-> Pricing captured **June 2026**. EUR figures converted at **≈ €1 = $1.14** ([ECB/Trading Economics, 30 Jun 2026](https://tradingeconomics.com/euro-area/currency)); USD is approximate and region/VAT-dependent. ⚠️ **Hetzner raised CPX/CCX cloud prices ~110–175% on 15 June 2026** ([Hetzner price-adjustment notice](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/)), which reshuffles the value ranking below.
+> Pricing captured **June 2026**. EUR figures converted at **≈ €1 = $1.14** ([ECB/Trading Economics, 30 Jun 2026](https://tradingeconomics.com/euro-area/currency)); USD is approximate and region/VAT-dependent. **Hetzner raised CPX/CCX cloud prices ~110–175% on 15 June 2026** ([Hetzner price-adjustment notice](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/)), which reshuffles the value ranking below.
 
 | Provider | Plan | vCPU / RAM | Disk | ~USD/mo | Regions | Link |
 |---|---|---|---|---|---|---|
@@ -141,7 +139,7 @@ how you'll use it:*
 - **Hostinger** — Pros: cheap *promo*, 32 GB RAM + 32 TB traffic, beginner-friendly panel, AMD EPYC. Cons: **renewal nearly doubles** (~$50) and the headline price needs a long up-front term.
 - **Scaleway** — Pros: genuine cloud (API, snapshots, EU data sovereignty), true hourly PAYG. Cons: **far pricier** for sustained 24/7 use and block storage + IPv4 are billed separately — not a budget pick.
 
-**💸 Best value pick:** **Contabo Cloud VPS 30 — 8 vCPU / 24 GB / 200 GB NVMe for ~$16/mo flat, unlimited traffic** ([contabo.com](https://contabo.com/en/vps-server/)) is the cheapest way to keep Claude Code + Codex agents running 24/7; step up to **Hetzner's ARM CAX41 (16 vCPU / 32 GB ≈ $47)** for the best raw performance-per-dollar if your stack is ARM64-friendly, or **Netcup VPS 2000 G12 (~$18, DDR5 ECC)** for the best price/quality balance on x86.
+**Best value pick:** **Contabo Cloud VPS 30 — 8 vCPU / 24 GB / 200 GB NVMe for ~$16/mo flat, unlimited traffic** ([contabo.com](https://contabo.com/en/vps-server/)) is the cheapest way to keep Claude Code + Codex agents running 24/7; step up to **Hetzner's ARM CAX41 (16 vCPU / 32 GB ≈ $47)** for the best raw performance-per-dollar if your stack is ARM64-friendly, or **Netcup VPS 2000 G12 (~$18, DDR5 ECC)** for the best price/quality balance on x86.
 
 
 ### Mainstream cloud providers
@@ -171,11 +169,11 @@ These are the big, well-supported clouds for running a Linux box with Claude Cod
 - **Google Cloud** — `e2-standard-8` is the value pick (~$196/mo); newer `c4-standard-8` is faster but ~$294/mo. Sustained/committed-use discounts help. ([src](https://cloud.google.com/products/compute/pricing/general-purpose))
 - **Microsoft Azure** — `D8as_v5` (AMD) $0.344/hr; best if you're already in Microsoft/Entra; reserved instances cut cost a lot. ([src](https://instances.vantage.sh/azure/vm/d8as-v5))
 
-⚠️ **The 24/7-cost trap.** Hourly clouds (**AWS EC2, GCE, Azure**) look cheap per-hour but get expensive run around the clock: AWS **m6a.2xlarge (8 vCPU/32 GB) = $0.3456/hr ≈ $252/mo** if always on ([Vantage](https://instances.vantage.sh/aws/ec2/m6a.2xlarge)); GCE e2-standard-8 ~$196/mo, Azure D8as_v5 ~$252/mo behave the same.
+**The 24/7-cost trap.** Hourly clouds (**AWS EC2, GCE, Azure**) look cheap per-hour but get expensive run around the clock: AWS **m6a.2xlarge (8 vCPU/32 GB) = $0.3456/hr ≈ $252/mo** if always on ([Vantage](https://instances.vantage.sh/aws/ec2/m6a.2xlarge)); GCE e2-standard-8 ~$196/mo, Azure D8as_v5 ~$252/mo behave the same.
 
-💡 **Stop-when-idle (the money-saver).** On EC2/GCE/Azure you can **stop** the instance when not coding — while stopped you pay only for the attached disk (EBS/PD/managed-disk, ~$8–12/mo for 100 GB), not compute. An agent box used ~3 hrs/day can cost **$30–40/mo instead of $250+**. Caveats: a static/Elastic IP may bill while stopped, and **flat-rate VPS providers (DO, Vultr, Linode, Lightsail, Hetzner) keep charging when powered off** — to stop paying there you snapshot + destroy, then rebuild.
+**Stop-when-idle (the money-saver).** On EC2/GCE/Azure you can **stop** the instance when not coding — while stopped you pay only for the attached disk (EBS/PD/managed-disk, ~$8–12/mo for 100 GB), not compute. An agent box used ~3 hrs/day can cost **$30–40/mo instead of $250+**. Caveats: a static/Elastic IP may bill while stopped, and **flat-rate VPS providers (DO, Vultr, Linode, Lightsail, Hetzner) keep charging when powered off** — to stop paying there you snapshot + destroy, then rebuild.
 
-☁️ **Best for managed/scalable:** **AWS EC2** (m6a.2xlarge + stop-when-idle) for max flexibility and pay-for-what-you-use, or **DigitalOcean** for the simplest predictable flat-rate managed VPS.
+**Best for managed/scalable:** **AWS EC2** (m6a.2xlarge + stop-when-idle) for max flexibility and pay-for-what-you-use, or **DigitalOcean** for the simplest predictable flat-rate managed VPS.
 
 
 ### Free & cheapest options + how much you actually need
@@ -193,7 +191,7 @@ Running Claude Code or OpenAI Codex on a VPS is cheap because the heavy lifting 
 | AWS Free Tier (legacy accounts) | 750 hrs/mo t2/t3.micro (1 vCPU / **1 GB**) + 30 GB EBS | $0 for **12 months** | Only for accounts created **before 15 Jul 2025**; 12-month clock then bills at PAYG. 1 GB RAM is tight. | [Free Tier FAQ](https://aws.amazon.com/free/free-tier-faqs/) |
 | **Azure free account** | $200 credit + 750 hrs/mo **B1S** (1 vCPU / 1 GB) Linux | $0 (credit 30 days; B1S free 12 mo) | **$200 credit expires in 30 days.** B1S is 1 GB. Disks/public IP/logs can bill even on "free" VMs. | [Azure free account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account) · [free services](https://azure.microsoft.com/en-us/pricing/free-services) |
 | **fly.io** | Pay-as-you-go Machines (from 256 MB) | Trial = **2 VM-hrs or 7 days**; cheapest always-on ~$2/mo | **No real free tier in 2026** (old Hobby allowances are legacy-only). A realistic small always-on box lands at **~$8–25/mo** once egress is counted. | [fly.io/pricing](https://fly.io/pricing/) |
-| **Hetzner CAX11 (ARM)** ⭐ | **2 vCPU / 4 GB / 40 GB / 20 TB traffic** | **~€3.79/mo (~$4.50)** | Best genuine value. **ARM** (Ampere) — watch x86-only Docker images/binaries. ARM available in DE/FI only. Prices rose mid-2026. | [hetzner.com/cloud](https://www.hetzner.com/cloud/) · [price change](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) |
+| **Hetzner CAX11 (ARM)** | **2 vCPU / 4 GB / 40 GB / 20 TB traffic** | **~€3.79/mo (~$4.50)** | Best genuine value. **ARM** (Ampere) — watch x86-only Docker images/binaries. ARM available in DE/FI only. Prices rose mid-2026. | [hetzner.com/cloud](https://www.hetzner.com/cloud/) · [price change](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) |
 | **Hetzner CX22 (x86)** | 2 vCPU / 4 GB / 40 GB / 20 TB traffic | **~€4.49/mo (~$5)** | x86 if you need it; EU + US (Ashburn/Hillsboro) locations. | [hetzner.com/cloud](https://www.hetzner.com/cloud/) |
 | **RackNerd (annual)** | 1–2 vCPU / 1–2.5 GB / 20–50 GB SSD (x86) | **~$1.49–2/mo billed yearly (~$18/yr)** | Oversold shared CPU; **renewal price is higher than promo**; quality varies by deal. | [racknerd.com](https://www.racknerd.com/) |
 
@@ -264,7 +262,7 @@ Built by generalizing a real, end-to-end setup (AWS Amazon Linux 2023 + a manage
 macOS laptop) into something anyone can re-run. PRs welcome — especially provider
 price updates and more OS branches.
 
-*Made because renting 8 cores should be easier than affording 8 cores.* 🚀
+*Made because renting 8 cores should be easier than affording 8 cores.*
 
 ---
 
