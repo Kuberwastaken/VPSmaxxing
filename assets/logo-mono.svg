@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="VPSmaxxing logo">
+  <title>VPSmaxxing</title>
+  <!-- inverted badge -->
+  <rect x="16" y="16" width="480" height="480" rx="116" fill="#0d0d0d"/>
+  <!-- outline frame -->
+  <rect x="44" y="44" width="424" height="424" rx="92" fill="none" stroke="#ffffff" stroke-width="8"/>
+  <!-- cloud silhouette (solid white, no internal seams) -->
+  <g fill="#ffffff">
+    <rect x="146" y="250" width="224" height="80" rx="40"/>
+    <circle cx="200" cy="252" r="62"/>
+    <circle cx="324" cy="252" r="62"/>
+    <circle cx="246" cy="206" r="60"/>
+    <circle cx="300" cy="214" r="48"/>
+  </g>
+  <!-- laptop screen -->
+  <rect x="200" y="212" width="112" height="82" rx="12" fill="#0d0d0d" stroke="#ffffff" stroke-width="6"/>
+  <!-- overlapping agent windows -->
+  <rect x="212" y="224" width="60" height="44" rx="6" fill="#ffffff" stroke="#0d0d0d" stroke-width="4"/>
+  <rect x="240" y="240" width="60" height="44" rx="6" fill="#ffffff" stroke="#0d0d0d" stroke-width="4"/>
+  <g stroke="#0d0d0d" stroke-width="5" stroke-linecap="round">
+    <line x1="250" y1="256" x2="290" y2="256"/>
+    <line x1="250" y1="268" x2="282" y2="268"/>
+  </g>
+  <!-- laptop base -->
+  <path d="M198 296 H314 L336 322 H176 Z" fill="#0d0d0d" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+</svg>
