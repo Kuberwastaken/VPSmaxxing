@@ -77,6 +77,8 @@ deletions, opening firewall ports).
 | 8 | **Reverse access** | Let the VPS reach the laptop's files; includes a **no-admin** path for managed/work laptops + a kill switch | `references/08-reverse-access.md` |
 | 9 | **Migration** | One-time copy of skills, memory, history/transcripts, and logins (GitHub `gh`, git, MCP) | `references/09-migration.md` |
 | 10 | **Auto-sync** | Cron-driven two-way rsync of skills/memory/history between laptop and VPS | `references/10-autosync.md` |
+| 11 | **Session hand-off** | Symmetric paths so a live session moves laptop↔VPS and resumes natively (`handoff`/`resume-here`) | `references/11-session-handoff.md` |
+| 12 | **Cross-session recall** | Register the `reference` MCP — search every past Claude + Codex session across both machines | `references/12-reference-mcp.md` |
 
 There are runnable, parameterized scripts in `scripts/` for the heavy phases.
 Prefer reading the matching `references/NN-*.md` first — it explains the *why* and
@@ -127,8 +129,11 @@ VPS are reached at `localhost:PORT` on the laptop via SSH tunnels. Agent state
 - **`gh` + git pre-wired** so agents can clone/push without prompts.
 - **Per-project tmux layouts** (editor pane + agent pane + logs pane).
 - **A status line / MOTD** that shows specs, running agents, and listening ports.
-- **Cloud-backed history sync** (e.g. claude-sync) if the user wants resume to
-  follow them across machines rather than per-directory `claude --continue`.
+- **Session hand-off** (phase 11) if the user wants to *move* a live conversation
+  between laptop and VPS and resume it natively; **reference MCP** (phase 12) if they
+  want to *search* across every past Claude + Codex session on both machines.
+- **Cloud-backed history sync** (e.g. claude-sync) as an alternative to phase 11 when
+  they want full resume to follow them without the symmetric-path setup.
 
 ---
 

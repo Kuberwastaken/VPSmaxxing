@@ -61,11 +61,19 @@ ls ~/.claude/projects/-Users-<you>/memory | grep _t_                # both marke
 # cleanup both sides afterward
 ```
 
-## Want cloud-backed resume instead?
-If you'd rather have full session **resume** follow you across machines (not just
-per-dir `claude --continue`), use a tool that remaps `$HOME` during sync —
+## Want to actually *resume* a session on the other machine?
+Auto-sync copies the transcript files, but `claude --continue` won't surface them
+across machines on its own (it's keyed by absolute cwd). The built-in fix is
+**session hand-off** (`11`): make the projects live at the same absolute path on both
+machines and they resume natively — no cloud service. Set it up with
+`setup-handoff.sh`; then `handoff <project>` / `resume-here <project>`.
+
+To *search* across every past session of both tools/machines rather than resume a
+specific one, register the **reference MCP** (`12`).
+
+Prefer a hosted option that remaps `$HOME` during sync? —
 [claude-sync](https://github.com/tawanorg/claude-sync) (Cloudflare R2, E2E) or
-[claude-code-sync](https://github.com/porkchop/claude-code-sync) (git). This DIY
-rsync is simpler and dependency-free; pick based on whether you need resume.
+[claude-code-sync](https://github.com/porkchop/claude-code-sync) (git). The
+symmetric-path approach in `11` is dependency-free and is what this skill recommends.
 
 ➡️ See `troubleshooting.md` for every trap this setup hit.

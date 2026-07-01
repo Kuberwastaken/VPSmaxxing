@@ -88,6 +88,8 @@ references for Tailscale, sync, etc.
 | Reverse access | VPS→laptop files (+ no-admin path) | [`08`](references/08-reverse-access.md) |
 | Migration | skills/memory/history/logins | [`09`](references/09-migration.md) |
 | Auto-sync | two-way rsync on a timer | [`10`](references/10-autosync.md) |
+| Hand-off | move a live session between machines & resume it | [`11`](references/11-session-handoff.md) |
+| Recall | reference MCP: search every session, both tools | [`12`](references/12-reference-mcp.md) |
 
 Architecture & mental model: [`references/00-architecture.md`](references/00-architecture.md).
 
@@ -248,10 +250,11 @@ syncs both ways. Full rationale in [`references/00-architecture.md`](references/
 
 ```
 SKILL.md            the Claude Code skill (interview + orchestration)
-references/00..10    step-by-step guides, OS-aware, generalized
+references/00..12    step-by-step guides, OS-aware, generalized
 references/troubleshooting.md   every trap that cost hours
 scripts/            runnable: provision, setup-agent-env, agent-sync,
-                    mac-user-sshd (no-admin reverse access), install-skill
+                    mac-user-sshd (no-admin reverse access), setup-handoff,
+                    setup-reference-mcp, install-skill
 ```
 
 ---
