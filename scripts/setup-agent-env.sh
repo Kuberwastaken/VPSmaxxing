@@ -127,6 +127,19 @@ You are running on a remote VPS that exists **solely to run AI coding agents**
 - Bind dev servers to 127.0.0.1:PORT (or 0.0.0.0:PORT) and TELL the human the port.
   Prefer 3000, 5173, 8000, 8080. They reach it via an SSH tunnel at the same
   localhost:PORT (\`vps-tunnel <PORT>\`). Ports are NOT public by default.
+
+## Companion laptop, session hand-off & recall
+- You have a **companion laptop**. Skills, memory, and Claude+Codex transcripts
+  auto-sync between it and this box every few minutes. If reverse access is set up,
+  reach it with \`ssh mac\` (rsync/git work over it).
+- **Move a session between machines** (when hand-off is configured — projects live at
+  the same absolute path on both): \`handoff <project>\` sends THIS session to the
+  other machine and resumes it there; \`resume-here <project>\` picks one up. Only hand
+  off at a turn boundary, and never run the same session live on both at once.
+- **Recall past work across both tools and machines**: if the \`reference\` MCP is
+  registered, use its tools (recall / search_sessions) — Claude can see Codex history
+  and vice versa. To browse this machine's own sessions: \`claude --resume\`, then
+  Ctrl+A to widen the picker to all projects.
 EOF
 cp ~/.claude/CLAUDE.md ~/.codex/AGENTS.md
 
