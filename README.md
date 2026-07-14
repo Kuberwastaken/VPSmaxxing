@@ -14,7 +14,7 @@ Turn a ~$5/mo cloud VPS into a dedicated, always-on workbench for Claude Code + 
 ![shell](https://img.shields.io/badge/shell-bash-000000?style=flat-square)
 ![agents](https://img.shields.io/badge/agents-Claude_Code_+_Codex-000000?style=flat-square)
 
-[![skills.sh](https://www.skills.sh/b/kuberwastaken/vpsmaxxing)](https://www.skills.sh/kuberwastaken/vpsmaxxing)
+[![skills.sh](https://www.skills.sh/b/kuberwastaken/vpsmaxxing)](https://www.skills.sh/kuberwastaken/vpsmaxxing/vpsmaxxing)
 
 </div>
 
